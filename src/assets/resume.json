@@ -1,0 +1,238 @@
+{
+  "firstName": "Dmytro",
+  "lastName": "Sholka",
+  "position": "Front-End Engineer",
+  "emailPrimary": "dmytro.sholka@icloud.com",
+  "mobilePhone": "1-215-485-1715",
+  "locationCity": "Lancaster",
+  "locationState": "PA",
+  "linkedin": "/dmytrosholka",
+  "github": "/dmytrosho",
+  "about": "Experienced and highly motivated frontend developer with a background in UI/UX design. I am passionate about creating clean, responsive, and user-friendly web applications. I am a team player who enjoys collaborating with others to achieve common goals. I am a quick learner and a problem solver who is always looking for ways to improve my skills and knowledge.",
+  "employment": [
+    {
+      "position": "Front-End Engineer",
+      "product": "WorshipPlanning",
+      "company": "Ministry Brands",
+      "endDate": "",
+      "startDate": "2024-01",
+      "location": "Remote",
+      "manager": "David Mills",
+      "responsibilities": [],
+      "skills": ["", ""]
+    },
+    {
+      "position": "Front-End Engineer",
+      "product": "DonorDirect",
+      "company": "Ministry Brands",
+      "endDate": "",
+      "startDate": "2024-01",
+      "location": "Remote",
+      "manager": "David Mills",
+      "responsibilities": [
+        {
+          "text": "Responsible for helping re-write DonorDirect StudioEnterprise in React 18. Worked on adding a new order page, which utilized useCallback, useContext, useEffect, useMemo, useState, and useForm and useWatch from react-hook-form. Also, created the warehouse, price code, shipping method, and product collections, as well as the loading and adding of products to the order using React state management. Worked with the DonorDirect API."
+        }
+      ],
+      "skills": ["React.js", "TypeScript", "Next.js", "REST API", "Tanstack/React-Query", "MUI"]
+    },
+    {
+      "position": "Front-End Engineer",
+      "product": "WorshipPlanning",
+      "company": "Ministry Brands",
+      "endDate": "2024-01",
+      "startDate": "2023-09",
+      "location": "Remote",
+      "manager": "David Mills",
+      "responsibilities": [
+        {
+          "text": "Developed a drag-and-drop stage setup component in Vue with Vuex state management and existing API, which helped to empower users to create and manage customized stage configurations for their events."
+        },
+        {
+          "text": "Developed a templating component for the events Vue module that is part of an ongoing process of rewriting an aging ColdFusion application into Vue.js."
+        }
+      ],
+      "skills": ["Vue.js", "Vuex", "ColdFusion", "JSON", "Git"]
+    },
+    {
+      "position": "Front-End Engineer",
+      "product": "AppBuilder",
+      "company": "Ministry Brands",
+      "endDate": "2023-09",
+      "startDate": "2023-06",
+      "location": "Remote",
+      "manager": "David Mills",
+      "responsibilities": [
+        {
+          "text": "Developed a feature-rich Flex Content React module for AppBuilder, which helps users craft dynamic pages with a wide array of content elements: text, external links, internal links to other modules, images, lists, and more.",
+          "link": "https://finance.yahoo.com/news/ministry-brands-launches-flex-content-151400444.html"
+        },
+        {
+          "text": "Successfully refactored a module (People) into two distinct modules (People & Groups) to better align with the needs of the product. This involved working on multiple React components, modifying the .NET backend, and writing migration scripts for changes to the SQL Server database."
+        },
+        {
+          "text": "Added a Scheduled Gifts section to AppBuilder, which allows users to schedule their gifts in advance. This involved working on React components, modifying the .NET backend, as well as writing migration scripts to make changes to the SQL Server database."
+        }
+      ],
+      "skills": ["React.js", ".NET Core", "SQL Server", "Grunt"]
+    },
+    {
+      "position": "Front-End Developer",
+      "product": "In10sity Interactive",
+      "company": "Ministry Brands",
+      "endDate": "2023-06",
+      "startDate": "2023-05",
+      "location": "Remote",
+      "manager": "David Mills",
+      "responsibilities": [
+        {
+          "text": "Successfully redesigned multiple websites for various organizations, while applying the latest HTML5, CSS3, and JavaScript technologies to update the CMS-based websites."
+        }
+      ],
+      "skills": ["HTML5", "CSS3", "JavaScript", "CMS"]
+    },
+    {
+      "position": "Front-End Developer",
+      "product": "DonorDirect",
+      "company": "Ministry Brands",
+      "endDate": "2023-05",
+      "startDate": "2023-01",
+      "location": "Remote",
+      "manager": "Stiles Watson",
+      "responsibilities": [
+        {
+          "text": "Responsible for helping in the successful development of a Proof of Concept (POC) for the DonorDirect StudioEnterprise UI refresh project. Wrote components to fetch data, such as Codes, Numbers, and Dates, ensured code quality through following guidelines and best practices."
+        }
+      ],
+      "skills": ["React.js (18)", "TypeScript", "MongoDB"]
+    },
+    {
+      "position": "Front-End Developer",
+      "product": "Shelby Financials",
+      "company": "Ministry Brands",
+      "endDate": "2023-01",
+      "startDate": "2021-04",
+      "location": "Remote",
+      "manager": "Richard Anthony",
+      "responsibilities": [
+        {
+          "text": "Developed an updated version of Portal for the Accounting app by writing custom components, as well as using KendoUI components for complex grids, charts, and multi-level dropdown lists. Updated icons to FontAwesome."
+        },
+        {
+          "text": "Developed a modular approach to styling with SCSS. This helped with fostering a more maintainable and scalable codebase."
+        }
+      ],
+      "skills": ["SCSS", "JavaScript (jQuery)", "KendoUI", "FontAwesome"]
+    },
+    {
+      "position": "Front-End Developer",
+      "product": "Shelby Financials",
+      "company": "Ministry Brands",
+      "endDate": "2021-04",
+      "startDate": "2020-09",
+      "location": "Remote",
+      "manager": "Brian Seagraves",
+      "responsibilities": [
+        {
+          "text": "Contributed to the development of the Shelby Financials UI update project by designing and implementing a suite of custom Blazor components, such as the Daily Task component for efficient task management, the Quick Reports for instant data insights, and the Organization Picker for streamlined organization selection."
+        }
+      ],
+      "skills": ["Blazor", "HTML", "CSS", "JSON"]
+    },
+    {
+      "position": "UI/UX Designer",
+      "product": "Corporate",
+      "company": "Ministry Brands",
+      "endDate": "2018-03",
+      "startDate": "2017-03",
+      "location": "Lancaster, PA",
+      "manager": "Brian Seagraves"
+    },
+    {
+      "position": "UI/UX Designer",
+      "product": "Corporate",
+      "company": "Ministry Brands",
+      "endDate": "2018-03",
+      "startDate": "2017-03",
+      "location": "Lancaster, PA",
+      "manager": "Roger Rohatgi",
+      "responsibilities": [
+        {
+          "text": "Developed designs, wireframes, interactive prototypes, and user flows of diverse web-based applications, including Giving, Accounting, and People. Ensured a seamless translation of design concepts into functionality by working in close collaboration with development teams."
+        }
+      ],
+      "skills": ["Figma", "Sketch", "Zeplin", "UX Principles"]
+    },
+    {
+      "position": "UI Developer",
+      "product": "Corporate",
+      "company": "Elexio",
+      "endDate": "2017-03",
+      "startDate": "2013-12",
+      "location": "Elizabethtown, PA",
+      "manager": "Josh Smith",
+      "responsibilities": [
+        {
+          "text": "Redesigned corporate site to bring it up to date with modern technology and design trends, which resulted in an increase in traffic. This included developing the Design System components, ensuring they are pixel-perfect and functionally flawless."
+        },
+        {
+          "text": "Joined efforts in the development of the next-generation ChMS product, which was successfully pitched to acquisition stakeholders."
+        }
+      ],
+      "skills": ["HTML", "CSS", "SCSS", "Less", "Cross-browser compatibility", "Responsive design"]
+    },
+    {
+      "position": "UI Developer Intern",
+      "product": "People",
+      "company": "Elexio",
+      "endDate": "2013-12",
+      "startDate": "2013-09",
+      "location": "Elizabethtown, PA",
+      "manager": "Josh Smith",
+      "subtitle": "(to fulfill my Bachelor's degree requirements)",
+      "responsibilities": [
+        {
+          "text": "Created designs for a new People module, including wireframes, mockups, and prototypes."
+        },
+        {
+          "text": "Revamped a mobile app, significantly enhancing user experience and interface design, resulting in a notable increase in user engagement."
+        }
+      ],
+      "skills": ["HTML", "CSS", "Mobile", "Gulp"]
+    }
+  ],
+  "skills": [
+    {
+      "title": "advanced",
+      "content": [
+        "JavaScript", "React.js", "Vue.js", "HTML5", "CSS3", "Sass", "Less", "Cross-browser Compatibility", "Responsive Design"
+      ]
+    },
+    {
+      "title": "intermediate",
+      "content": [
+        "TypeScript", ".NET Core", "SQL Server", "REST API"
+      ]
+    },
+    {
+      "title": "tools/methodologies",
+      "content": [
+        "Azure DevOps", "Git", "Agile/Scrum", "Node.js", "npm", "nvm", "Grunt", "Gulp.js", "Docker", "Webpack"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "The Master's University",
+      "degree": "Bachelor of Science",
+      "major": "Computer Science",
+      "endDate": "Class of 2013",
+      "achievements": [
+        "Graduated with honors (Magna Cum Laude)",
+        "President's List for academic excellence",
+        "Dean's List",
+        "Sigma Zeta Honor Society"
+      ]
+    }
+  ]
+}

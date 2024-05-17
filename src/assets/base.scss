@@ -1,0 +1,83 @@
+:root {
+	--res-bg: #f4f2ee;
+	--res-white: #ffffff;
+	--res-white-soft: #f8f8f8;
+	--res-white-mute: #f2f2f2;
+
+	--res-black: #181818;
+	--res-black-soft: #222222;
+	--res-black-mute: #282828;
+
+	--res-accented-text: #C02F1D;//#AD2A1A;//#9A2617;//#ff6f00;
+	--res-accented-text-hover: rgba(192, 47, 29, 0.05);
+	--res-linking-text: #2196f3;
+	--res-linking-text-hover: rgba(33, 150, 243, .1);
+	--res-gray-1: #757575;
+
+	--res-divider-light-1: rgba(60, 60, 60, 0.29);
+	--res-divider-light-2: rgba(60, 60, 60, 0.12);
+	--res-divider-dark-1: rgba(84, 84, 84, 0.65);
+	--res-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+	--res-text-light-1: var(--res-black);
+	--res-text-light-2: rgba(60, 60, 60, 0.66);
+	--res-text-dark-1: var(--res-white);
+	--res-text-dark-2: rgba(235, 235, 235, 0.64);
+}
+
+:root {
+	// --color-background: var(--res-white);
+	--color-background: var(--res-bg);
+	--color-background-soft: var(--res-white-soft);
+	--color-background-mute: var(--res-white-mute);
+
+	--color-border: var(--res-divider-light-2);
+	--color-border-hover: var(--res-divider-light-1);
+
+	--color-heading: var(--res-text-light-1);
+	--color-text: var(--res-text-light-1);
+
+	--section-gap: 160px;
+}
+
+// @media (prefers-color-scheme: dark) {
+// 	:root {
+// 		--color-background: var(--res-black);
+// 		--color-background-soft: var(--res-black-soft);
+// 		--color-background-mute: var(--res-black-mute);
+
+// 		--color-border: var(--res-divider-dark-2);
+// 		--color-border-hover: var(--res-divider-dark-1);
+
+// 		--color-heading: var(--res-text-dark-1);
+// 		--color-text: var(--res-text-dark-2);
+// 	}
+// }
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: var(--color-background);
+	color: var(--color-text);
+	font-family: 'Aptos', sans-serif;
+	font-size: 18px;
+	line-height: 1.75;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transition: color 0.5s, background-color 0.5s;
+}
