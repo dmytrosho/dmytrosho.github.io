@@ -1,28 +1,15 @@
 <template>
-    <div class="link flex flex-all">
-        <a href="http://dmytrosho.github.io/resume">Resume</a>
-    </div>
-    <div class="link flex flex-all">
-        <a href="http://dmytrosho.github.io/skyfitness">SkyFitness</a>
-    </div>
+  <div class="link flex flex-all">
+    <SitePreview url="http://dmytrosho.github.io/resume" image="" text="Resume" />
+  </div>
+  <div class="link flex flex-all">
+    <SitePreview url="http://dmytrosho.github.io/skyfitness" image="" text="SkyFitness" />
+  </div>
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Autoplay, FreeMode, Navigation, Pagination } from 'swiper/modules'
-import 'swiper/css'
-import 'swiper/css/pagination'
-import 'swiper/css/navigation'
+import SitePreview from '../components/SitePreview.vue'
 export default {
-    
-  components: {
-    Swiper,
-    SwiperSlide
-  },
-  computed: {
-    modules() {
-      return [Autoplay, FreeMode, Navigation, Pagination]
-    }
-  }
+  components: { SitePreview }
 }
 </script>
