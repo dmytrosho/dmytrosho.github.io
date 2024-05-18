@@ -3,14 +3,14 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <header class="flex">
-    <h1>dmytro sholka<i>:</i></h1>
+  <nav class="flex">
+    <router-link to="/" class="h1">dmytro sholka<i>:</i></router-link>
     <dropper
       :selectedOption="selectedOption"
       :options="navLinks"
       @update:selectedOption="handleSelectedOptionUpdate"
     />
-  </header>
+  </nav>
   <RouterView />
 </template>
 
@@ -37,11 +37,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
-header {
+nav {
   position: relative;
   padding: 0 1rem;
+  background-color: rgba(0, 0, 0, 0.05);
 
-  h1 {
+  .h1 {
+    gap: 0;
     color: burlywood;
     font-size: 3rem;
     text-transform: capitalize;
@@ -50,6 +52,16 @@ header {
     i {
       font-style: normal;
       animation: flicker 0.46s infinite alternate;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 1rem;
+
+    .h1 {
+      font-size: 1.5rem;
     }
   }
 }

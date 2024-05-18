@@ -111,4 +111,18 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .dropper {
+    a {
+      font-size: 1.5rem;
+    }
+
+    .dropper-menu {
+      .dropper-item {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
 </style>
