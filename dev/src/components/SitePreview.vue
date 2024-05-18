@@ -1,7 +1,9 @@
 <template>
-  <a :href="url" class="link-with-preview" :style="{ backgroundImage: 'url(' + image + ')' }">
-    {{ text }}
-  </a>
+  <div class="link flex">
+    <a :href="url" class="link-with-preview" :style="{ backgroundImage: 'url(' + image + ')' }">
+      {{ text }}
+    </a>
+  </div>
 </template>
 
 <script>

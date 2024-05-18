@@ -1,10 +1,6 @@
 <template>
-  <div class="link flex flex-all">
-    <SitePreview url="http://dmytrosho.github.io/resume" image="" text="Resume" />
-  </div>
-  <div class="link flex flex-all">
-    <SitePreview url="http://dmytrosho.github.io/skyfitness" image="" text="SkyFitness" />
-  </div>
+  <SitePreview url="http://dmytrosho.github.io/resume" image="" text="Resume" />
+  <SitePreview url="http://dmytrosho.github.io/skyfitness" image="" text="SkyFitness" />
 </template>
 
 <script>

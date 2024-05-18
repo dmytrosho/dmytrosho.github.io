@@ -25,6 +25,7 @@
     "dart-sass": "^1.25.0",
     "eslint": "^8.49.0",
     "eslint-plugin-vue": "^9.17.0",
+    "fs-extra": "^11.2.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^9.0.0",
     "gulp-clean-css": "^4.3.0",

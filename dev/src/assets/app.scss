@@ -56,19 +56,22 @@ a {
 .link {
   justify-content: center;
   align-items: center;
+  margin: 2%;
 
   a {
+    min-width: 180px;
+    min-height: 90px;
     max-width: 20%;
     max-height: 20%;
     padding: 18% 36%;
     justify-content: center;
-    align-items: center;
+    gap: 0;
     border-radius: 1rem;
     background-color: white;
     color: burlywood;
-    font-size: 7vw;
+    font-size: 5vw;
     text-shadow: 1px 1px white;
-    transition: all 0.3s ease-in-out;
+    transition: all 1s ease-in-out;
 
     &:hover {
       box-shadow: 0 0 3rem rgba(106,90,60,.1);
@@ -87,6 +90,8 @@ a {
 
   .link {
     a {
+      min-width: 90px;
+      min-height: 180px;
       padding: 39% 18%;
     }
   }
