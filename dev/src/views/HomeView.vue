@@ -1,7 +1,9 @@
 <script setup>
-import AboutPage from '../components/AboutPage.vue'
+import HomePage from '../components/HomePage.vue'
 </script>
 
 <template>
-	<AboutPage />
+  <section class="flex flex-all flex-gap">
+    <HomePage />
+  </section>
 </template>

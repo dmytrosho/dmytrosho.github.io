@@ -40,10 +40,7 @@ const customBuild = {
 // https://vitejs.dev/config/
 export default defineConfig({
   base: '/',
-  plugins: [
-    vue(),
-    customBuild,
-  ],
+  plugins: [vue(), customBuild],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
@@ -51,6 +48,6 @@ export default defineConfig({
   },
   build: {
     outDir: buildTempDir,
-    emptyOutDir: true,
-  },
+    emptyOutDir: true
+  }
 })
