@@ -1,18 +1,20 @@
 <template>
-  <div class="dropper">
+  <div class="dropper" ref="dropper">
     <div class="dropper-selected" @click="toggleDropdown">
       <a>{{ selectedOption ? selectedOption.label : 'Select a page' }}</a>
     </div>
-    <ul v-if="isOpen" class="dropper-menu">
-      <li
-        v-for="option in reorderedOptions"
-        :key="option.value"
-        @click="navigateTo(option.value)"
-        class="dropper-item"
-      >
-        {{ option.label }}
-      </li>
-    </ul>
+    <transition name="dropdown">
+      <ul v-if="isOpen" class="dropper-menu">
+        <li
+          v-for="option in reorderedOptions"
+          :key="option.value"
+          @click="navigateTo(option.value)"
+          class="dropper-item"
+        >
+          {{ option.label }}
+        </li>
+      </ul>
+    </transition>
   </div>
 </template>
 
@@ -40,6 +42,10 @@ export default {
         this.setSelectedOptionByRoute(newPath)
       }
     )
+    document.addEventListener('click', this.handleClickOutside)
+  },
+  beforeUnmount() {
+    document.removeEventListener('click', this.handleClickOutside)
   },
   computed: {
     reorderedOptions() {
@@ -51,6 +57,11 @@ export default {
   methods: {
     toggleDropdown() {
       this.isOpen = !this.isOpen
+    },
+    handleClickOutside(event) {
+      if (this.$refs.dropper && !this.$refs.dropper.contains(event.target)) {
+        this.isOpen = false
+      }
     },
     navigateTo(route) {
       const targetRoute = this.options.find((option) => option.value === route)
@@ -94,11 +105,13 @@ export default {
   }
 
   .dropper-menu {
-    width: 100%;
     position: absolute;
     top: 100%;
     left: 0;
-    padding: 0;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 0 15px;
+    background-color: rgba(0, 0, 0, 0.05);
     list-style-type: none;
     z-index: 1000;
 
@@ -110,6 +123,25 @@ export default {
       cursor: pointer;
     }
   }
+}
+
+.dropdown-enter-active,
+.dropdown-leave-active {
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
+}
+
+.dropdown-enter-from,
+.dropdown-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.dropdown-enter-to,
+.dropdown-leave-from {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media screen and (max-width: 768px) {
