@@ -41,8 +41,9 @@ export default {
       const userAgent = 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1'
       const width = '390'
       const height = '844'
+      const fresh = true
       let query = 'https://shot.screenshotapi.net/screenshot'
-      query += `?token=${token}&url=${encodeURIComponent(this.url)}&width=${width}&height=${height}&user_agent=${encodeURIComponent(userAgent)}&full_page=true`
+      query += `?token=${token}&url=${encodeURIComponent(this.url)}&fresh=${fresh}&width=${width}&height=${height}&user_agent=${encodeURIComponent(userAgent)}&full_page=true`
 
       try {
         const response = await axios.get(query)

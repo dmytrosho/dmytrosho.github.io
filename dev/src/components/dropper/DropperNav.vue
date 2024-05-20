@@ -112,9 +112,20 @@ export default {
     margin-left: -15px;
     margin-right: -15px;
     padding: 0 15px;
-    background-color: rgba(0, 0, 0, 0.05);
+    // background-color: rgba(0, 0, 0, 0.05);
+    background-color: #f4f2ee;
     list-style-type: none;
     z-index: 1000;
+
+    &::before {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.05);
+      content: "";
+    }
 
     .dropper-item {
       padding: 0 0.5rem;
@@ -122,8 +133,8 @@ export default {
       font-size: 3rem;
       text-transform: capitalize;
       cursor: pointer;
-      transition: all .3s ease-in-out;
-      opacity: .75;
+      transition: all 0.3s ease-in-out;
+      opacity: 0.75;
 
       &:hover {
         opacity: 1;

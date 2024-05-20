@@ -5,7 +5,7 @@ import { RouterView } from 'vue-router'
 <template>
   <nav class="flex">
     <h1 class="flex flex-col">
-      <sup class="flex">Hello, I'm</sup>
+      <!-- <sup class="flex">Hello, I'm</sup> -->
       <router-link to="/">dmytro sholka<i>:</i></router-link>
       <!-- <sub class="flex flex-end">and this is my</sub> -->
     </h1>
@@ -81,9 +81,9 @@ nav {
 
 @media screen and (max-width: 768px) {
   nav {
-    padding: 1rem;
+    padding: .5rem 1rem;
 
-    .h1 {
+    h1 {
       font-size: 1.5rem;
     }
   }

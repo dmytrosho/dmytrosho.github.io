@@ -40,20 +40,6 @@
 	--section-gap: 160px;
 }
 
-// @media (prefers-color-scheme: dark) {
-// 	:root {
-// 		--color-background: var(--res-black);
-// 		--color-background-soft: var(--res-black-soft);
-// 		--color-background-mute: var(--res-black-mute);
-
-// 		--color-border: var(--res-divider-dark-2);
-// 		--color-border-hover: var(--res-divider-dark-1);
-
-// 		--color-heading: var(--res-text-dark-1);
-// 		--color-text: var(--res-text-dark-2);
-// 	}
-// }
-
 *,
 *::before,
 *::after {
@@ -80,4 +66,5 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	transition: color 0.5s, background-color 0.5s;
+	overflow: hidden;
 }
