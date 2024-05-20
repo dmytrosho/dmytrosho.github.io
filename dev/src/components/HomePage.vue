@@ -1,6 +1,6 @@
 <template>
-  <SitePreview url="http://dmytrosho.github.io/resume" image="" text="Resume" />
-  <SitePreview url="http://dmytrosho.github.io/skyfitness" image="" text="SkyFitness" />
+  <SitePreview url="http://dmytrosho.github.io/resume" text="Resume" />
+  <SitePreview url="http://dmytrosho.github.io/skyfitness" text="SkyFitness" />
 </template>
 
 <script>

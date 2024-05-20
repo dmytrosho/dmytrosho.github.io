@@ -97,6 +97,7 @@ export default {
     font-size: 3rem;
     text-transform: capitalize;
     cursor: pointer;
+    opacity: 1;
   }
 
   &:focus,
@@ -121,6 +122,12 @@ export default {
       font-size: 3rem;
       text-transform: capitalize;
       cursor: pointer;
+      transition: all .3s ease-in-out;
+      opacity: .75;
+
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 }
