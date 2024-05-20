@@ -112,9 +112,10 @@ export default {
     margin-left: -15px;
     margin-right: -15px;
     padding: 0 15px;
-    // background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 0 0 1rem 1rem;
     background-color: #f4f2ee;
     list-style-type: none;
+    overflow: hidden;
     z-index: 1000;
 
     &::before {
