@@ -68,8 +68,6 @@ button {
 }
 
 @media screen and (max-width: 768px) {
-  :empty {
-    display: none;
-  }
+
 }
 </style>
