@@ -88,8 +88,7 @@ export default {
   display: inline-flex;
   position: relative;
   border: none;
-  background: none;
-  appearance: none;
+  z-index: 1;
 
   a {
     padding: 0 0.5rem;
@@ -113,20 +112,8 @@ export default {
     margin-right: -15px;
     padding: 0 15px;
     border-radius: 0 0 1rem 1rem;
-    background-color: #f4f2ee;
+    background-color: #E8E6E2;
     list-style-type: none;
-    overflow: hidden;
-    z-index: 1000;
-
-    &::before {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: rgba(0, 0, 0, 0.05);
-      content: "";
-    }
 
     .dropper-item {
       padding: 0 0.5rem;
