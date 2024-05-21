@@ -10,37 +10,35 @@ const buildTempDir = fileURLToPath(new URL('../temp', import.meta.url))
 
 async function copyFiles() {
   const filesToCopy = ['favicon.ico', 'index.html']
-  const dirsToCopy = ['assets']
+  const assetPrefix = 'index-'
 
   try {
-    console.log('Starting custom build...')
+    const oldAssets = await fs.readdir(outputDir)
+    for (const file of oldAssets) {
+      if (file.startsWith(assetPrefix) && (file.endsWith('.js') || file.endsWith('.css'))) {
+        await fs.remove(path.join(outputDir, file))
+      }
+    }
 
     for (const file of filesToCopy) {
       const srcPath = path.join(buildTempDir, file)
       const destPath = path.join(outputDir, file)
-      console.log(`Attempting to copy file from ${srcPath} to ${destPath}`)
       if (await fs.pathExists(srcPath)) {
         await fs.copy(srcPath, destPath)
-        console.log(`Copied file: ${file}`)
       } else {
         console.log(`File not found: ${file}`)
       }
     }
 
-    for (const dir of dirsToCopy) {
-      const srcPath = path.join(buildTempDir, dir)
-      const destPath = path.join(outputDir, dir)
-      console.log(`Attempting to copy directory from ${srcPath} to ${destPath}`)
-      if (await fs.pathExists(srcPath)) {
-        await fs.copy(srcPath, destPath)
-        console.log(`Copied directory: ${dir}`)
-      } else {
-        console.log(`Directory not found: ${dir}`)
-      }
+    const assetsSrcPath = path.join(buildTempDir, 'assets')
+    const assetsDestPath = path.join(outputDir, 'assets')
+    if (await fs.pathExists(assetsSrcPath)) {
+      await fs.copy(assetsSrcPath, assetsDestPath)
+    } else {
+      console.error('Error')
     }
 
     await fs.remove(buildTempDir)
-    console.log('Removed temp directory')
   } catch (error) {
     console.error('Error in custom build:', error)
   }
