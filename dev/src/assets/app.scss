@@ -33,6 +33,7 @@ a {
   // box-shadow: inset 0 -2px 0 var(--res-linking-text-hover);
   // color: var(--res-linking-text);
   text-decoration: none;
+  letter-spacing: -2px;
   transition:
     color 0.25s,
     box-shadow 0.25s;
@@ -64,6 +65,7 @@ a {
 #nprogress {
   .bar {
     background: var(--res-accented-text);
+    // background: var(--ds-accent);
   }
 }
 

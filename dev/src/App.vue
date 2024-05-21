@@ -42,6 +42,7 @@ export default {
 
 <style scoped lang="scss">
 nav {
+  gap: 0.5rem;
   position: relative;
   padding: 0 1rem;
   background-color: #e8e6e2;
@@ -49,6 +50,7 @@ nav {
   h1 {
     gap: 0;
     font-size: 3rem;
+    font-weight: normal;
     text-transform: capitalize;
     opacity: 0.75;
 

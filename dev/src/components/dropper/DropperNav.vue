@@ -4,16 +4,16 @@
       <a>{{ selectedOption ? selectedOption.label : 'Select a page' }}</a>
     </div>
     <transition name="dropdown">
-      <ul v-if="isOpen" class="dropper-menu">
-        <li
+      <div v-if="isOpen" class="dropper-menu">
+        <a
           v-for="option in reorderedOptions"
           :key="option.value"
           @click="navigateTo(option.value)"
           class="dropper-item"
         >
           {{ option.label }}
-        </li>
-      </ul>
+        </a>
+      </div>
     </transition>
   </div>
 </template>
@@ -93,35 +93,26 @@ export default {
   a {
     padding: 0 0.5rem;
     color: burlywood;
+    // color: var(--ds-accent);
     font-size: 3rem;
     text-transform: capitalize;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
     opacity: 1;
-  }
-
-  &:focus,
-  &:active {
-    outline: none;
   }
 
   .dropper-menu {
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
     position: absolute;
     top: 0;
     left: 100%;
-    padding: 0 1rem;
-    border-radius: 0 0 1rem 1rem;
+    padding: 0 0.5rem;
     background-color: #e8e6e2;
+    // background-color: var(--ds-muted);
     list-style-type: none;
 
     .dropper-item {
-      padding: 0 0.5rem;
-      color: burlywood;
-      font-size: 3rem;
-      text-transform: capitalize;
-      cursor: pointer;
-      transition: all 0.3s ease-in-out;
       opacity: 0.75;
 
       &:hover {
@@ -150,6 +141,18 @@ export default {
   transform: translateX(0);
 }
 
+.dropdown-enter-active .dropper-item:nth-child(1) {
+  transition-delay: 1s;
+}
+
+.dropdown-enter-active .dropper-item:nth-child(2) {
+  transition-delay: 2s;
+}
+
+.dropdown-enter-active .dropper-item:nth-child(3) {
+  transition-delay: 3s;
+}
+
 @media screen and (max-width: 768px) {
   .dropper {
     a {
@@ -162,6 +165,7 @@ export default {
       left: 0;
       margin-left: -1rem;
       margin-right: -1rem;
+      border-radius: 0 0 1rem 1rem;
 
       .dropper-item {
         font-size: 1.5rem;
