@@ -1,9 +1,5 @@
 <template>
-  <form
-    action="https://formspree.io/f/mgegbejd"
-    method="POST"
-    class="flex flex-all"
-  >
+  <form action="https://formspree.io/f/mgegbejd" method="POST" class="flex flex-all">
     <div class="flex flex-all flex-col flex-gap">
       <div class="flex flex-col">
         <label>Name:</label>
@@ -68,6 +64,5 @@ button {
 }
 
 @media screen and (max-width: 768px) {
-
 }
 </style>

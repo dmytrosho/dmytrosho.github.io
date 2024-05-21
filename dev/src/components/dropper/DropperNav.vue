@@ -105,14 +105,14 @@ export default {
   }
 
   .dropper-menu {
+    display: flex;
+    gap: 1rem;
     position: absolute;
-    top: 100%;
-    left: 0;
-    margin-left: -15px;
-    margin-right: -15px;
-    padding: 0 15px;
+    top: 0;
+    left: 100%;
+    padding: 0 1rem;
     border-radius: 0 0 1rem 1rem;
-    background-color: #E8E6E2;
+    background-color: #e8e6e2;
     list-style-type: none;
 
     .dropper-item {
@@ -141,13 +141,13 @@ export default {
 .dropdown-enter-from,
 .dropdown-leave-to {
   opacity: 0;
-  transform: translateY(-10px);
+  transform: translateX(-10px);
 }
 
 .dropdown-enter-to,
 .dropdown-leave-from {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0);
 }
 
 @media screen and (max-width: 768px) {
@@ -157,10 +157,28 @@ export default {
     }
 
     .dropper-menu {
+      flex-direction: column;
+      top: 100%;
+      left: 0;
+      margin-left: -1rem;
+      margin-right: -1rem;
+
       .dropper-item {
         font-size: 1.5rem;
       }
     }
+  }
+
+  .dropdown-enter-from,
+  .dropdown-leave-to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  .dropdown-enter-to,
+  .dropdown-leave-from {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 </style>

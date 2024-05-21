@@ -44,7 +44,7 @@ export default {
 nav {
   position: relative;
   padding: 0 1rem;
-  background-color: #E8E6E2;
+  background-color: #e8e6e2;
 
   h1 {
     gap: 0;
@@ -81,7 +81,7 @@ nav {
 
 @media screen and (max-width: 768px) {
   nav {
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
 
     h1 {
       font-size: 1.5rem;
