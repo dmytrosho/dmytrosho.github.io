@@ -20,9 +20,10 @@ section {
   .image {
     border-radius: 1rem;
     // background-image: url('../assets/images/profile.png');
+    // background-image: url('../assets/images/profile_single.jpg');
     background-repeat: no-repeat;
-    // background-position: center;
-    background-size: cover;
+    // background-position: center -140px;
+    background-size: contain;
   }
 }
 @media screen and (max-width: 768px) {

@@ -44,7 +44,7 @@ export default {
 nav {
   position: relative;
   padding: 0 1rem;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: #E8E6E2;
 
   h1 {
     gap: 0;
