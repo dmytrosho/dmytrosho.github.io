@@ -3,24 +3,25 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <nav class="flex">
+  <nav class="flex align-center">
     <h1 class="flex flex-col">
-      <!-- <sup class="flex">Hello, I'm</sup> -->
       <router-link to="/">dmytro sholka<i>:</i></router-link>
-      <!-- <sub class="flex flex-end">and this is my</sub> -->
     </h1>
     <dropper
       :selectedOption="selectedOption"
       :options="navLinks"
       @update:selectedOption="handleSelectedOptionUpdate"
     />
+    <switcher />
   </nav>
   <RouterView />
 </template>
 
 <script>
 import dropper from './components/dropper/DropperNav.vue'
+import switcher from './components/switcher/ThemeSwitcher.vue'
 export default {
+  components: { dropper, switcher },
   data() {
     return {
       navLinks: [
@@ -35,8 +36,7 @@ export default {
     handleSelectedOptionUpdate(option) {
       this.selectedOption = option
     }
-  },
-  components: { dropper }
+  }
 }
 </script>
 
@@ -84,7 +84,7 @@ nav {
 @media screen and (max-width: 768px) {
   nav {
     gap: 0;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.75rem;
 
     h1 {
       font-size: 1.5rem;

@@ -18,8 +18,7 @@ export default {
   data() {
     return {
       image: null,
-      loading: false,
-      backup: null
+      loading: false
     }
   },
   props: {
@@ -42,7 +41,7 @@ export default {
   methods: {
     async fetchScreenshot() {
       if (!this.url) {
-        console.error('No valid URL!')
+        console.error('No valid URL')
         return
       }
 
@@ -52,14 +51,18 @@ export default {
         'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1'
       const width = '390'
       const height = '844'
-      const fresh = true
+      const fresh = false
       let query = 'https://shot.screenshotapi.net/screenshot'
       query += `?token=${token}&url=${encodeURIComponent(this.url)}&fresh=${fresh}&width=${width}&height=${height}&user_agent=${encodeURIComponent(userAgent)}&full_page=true`
 
       try {
         const response = await axios.get(query)
-        // this.backup = URL.createObjectURL(response.data.screenshot)
-        this.image = !response.data.error ? response.data.screenshot : this.local
+        if (response.data.error) {
+          console.error(response.data.error)
+          this.image = this.local
+        } else {
+          this.image = response.data.screenshot
+        }
       } catch (error) {
         console.error('Error fetching screenshot:', error)
       } finally {
@@ -87,7 +90,7 @@ export default {
     transition: all 1s ease-in-out;
     overflow: hidden;
 
-    &::before {
+    &::after {
       width: 100%;
       height: 100%;
       position: absolute;

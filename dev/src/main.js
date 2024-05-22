@@ -5,10 +5,10 @@ import App from './App.vue'
 import router from './router'
 import NProgress from 'nprogress'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faSpinner } from '@fortawesome/free-solid-svg-icons'
+import { faMoon, faSpinner, faSun } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faSpinner)
+library.add(faMoon, faSpinner, faSun)
 
 const app = createApp(App)
 

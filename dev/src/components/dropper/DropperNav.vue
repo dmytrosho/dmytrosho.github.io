@@ -1,5 +1,5 @@
 <template>
-  <div class="dropper" ref="dropper">
+  <div class="dropper flex-all" ref="dropper">
     <div class="dropper-selected" @click="toggleDropdown">
       <a>{{ selectedOption ? selectedOption.label : 'Select a page' }}</a>
     </div>

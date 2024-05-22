@@ -41,36 +41,39 @@
 
   // --ds-background: #f4f1de;
   // --ds-accent: #e07a5f;
-  // --ds-text: #3d405b;
-  // --ds-primary: #81b29a;
+  // --ds-light-text: #3D405B;
   // --ds-muted: #f2cc8f;
+  // --ds-dark-background: #3D405B;
+  --ds-l-primary: #81B29A;
+  --ds-l-background: lighten(var(--ds-l-primary), 20%);
+  --ds-l-text: darken(var(--ds-l-primary), 40%);
+  --ds-l-muted: desaturate(var(--ds-l-primary), 20%);
 }
 
-[data-theme='light'] {
-  --primary-100: #81b29a;
-  --primary-200: #8fbaa5;
-  --primary-300: #9dc3b0;
-  --primary-400: #abcbbb;
-  --primary-500: #b9d4c6;
-  --primary-600: #c6dcd1;
-}
+// [data-theme='light'] {
+//   --primary-100: #81b29a;
+//   --primary-200: #8fbaa5;
+//   --primary-300: #9dc3b0;
+//   --primary-400: #abcbbb;
+//   --primary-500: #b9d4c6;
+//   --primary-600: #c6dcd1;
+// }
 
-[data-theme='dark'] {
-  /** SCSS DARK THEME PRIMARY COLORS */
-  $primary-100: #81b29a;
-  $primary-200: #8fbaa5;
-  $primary-300: #9dc3b0;
-  $primary-400: #abcbbb;
-  $primary-500: #b9d4c6;
-  $primary-600: #c6dcd1;
-  /** SCSS DARK THEME SURFACE COLORS */
-  $surface-100: #3d405b;
-  $surface-200: #51536c;
-  $surface-300: #65667d;
-  $surface-400: #797a8e;
-  $surface-500: #8e8fa0;
-  $surface-600: #a4a5b3;
-}
+// [data-theme='dark'] {
+//   $primary-100: #81b29a;
+//   $primary-200: #8fbaa5;
+//   $primary-300: #9dc3b0;
+//   $primary-400: #abcbbb;
+//   $primary-500: #b9d4c6;
+//   $primary-600: #c6dcd1;
+
+//   $surface-100: #3d405b;
+//   $surface-200: #51536c;
+//   $surface-300: #65667d;
+//   $surface-400: #797a8e;
+//   $surface-500: #8e8fa0;
+//   $surface-600: #a4a5b3;
+// }
 
 *,
 *::before,
@@ -103,4 +106,6 @@ body {
     color 0.5s,
     background-color 0.5s;
   overflow: hidden;
+
+  &.dark {}
 }
