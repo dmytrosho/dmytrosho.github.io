@@ -11,6 +11,9 @@
 
 <script>
 import axios from 'axios'
+// import resume_image from '@/assets/images/dmytrosho_github_io_resume_908a7fda3133.png'
+// import skyfitness_image from '@/assets/images/dmytrosho_github_io_skyfitness.png'
+
 export default {
   data() {
     return {

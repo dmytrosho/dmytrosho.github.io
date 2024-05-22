@@ -83,10 +83,12 @@ nav {
 
 @media screen and (max-width: 768px) {
   nav {
+    gap: 0;
     padding: 0.5rem 1rem;
 
     h1 {
       font-size: 1.5rem;
+      white-space: nowrap;
     }
   }
 }
