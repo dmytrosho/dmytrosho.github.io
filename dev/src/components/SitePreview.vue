@@ -1,30 +1,35 @@
 <template>
   <div class="link flex">
     <a :href="url" class="link-with-preview" :style="{ backgroundImage: 'url(' + image + ')' }">
-      <template v-if="loading"><font-awesome-icon :icon="['fas', 'spinner']" /></template>
-      <template v-else
-        ><span>{{ text }}</span></template
-      >
+      <template v-if="loading">
+        <font-awesome-icon :icon="['fas', 'spinner']" />
+      </template>
+      <template v-else>
+        <span>{{ text }}</span>
+      </template>
     </a>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
-// import resume_image from '@/assets/images/dmytrosho_github_io_resume_908a7fda3133.png'
-// import skyfitness_image from '@/assets/images/dmytrosho_github_io_skyfitness.png'
 
 export default {
   data() {
     return {
-      image: '',
-      loading: false
+      image: null,
+      loading: false,
+      backup: null
     }
   },
   props: {
     url: {
       type: String,
       required: true
+    },
+    local: {
+      type: String,
+      reguired: false
     },
     text: {
       type: String,
@@ -53,7 +58,8 @@ export default {
 
       try {
         const response = await axios.get(query)
-        this.image = response.data.screenshot
+        // this.backup = URL.createObjectURL(response.data.screenshot)
+        this.image = !response.data.error ? response.data.screenshot : this.local
       } catch (error) {
         console.error('Error fetching screenshot:', error)
       } finally {
@@ -87,7 +93,6 @@ export default {
       position: absolute;
       top: 0;
       left: 0;
-      border-radius: 1rem;
       background-color: rgba(0, 0, 0, 0.05);
       transition: all 1s ease-in-out;
       opacity: 1;
@@ -108,7 +113,9 @@ export default {
     svg {
       width: 2rem;
       position: absolute;
+      top: 50%;
       left: 50%;
+      margin-top: -1rem;
       margin-left: -1rem;
       animation: rotate 0.75s linear infinite;
     }
@@ -132,7 +139,6 @@ export default {
   }
 }
 
-
 @media screen and (max-width: 768px) {
   .link {
     flex: 1 0 0%;
@@ -141,6 +147,7 @@ export default {
       flex: 1 0 0%;
       min-width: 0;
       min-height: 300px;
+      font-size: 1.5rem;
     }
   }
 }
