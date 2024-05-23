@@ -15,6 +15,38 @@
       :spaceBetween="0"
       :navigation="true"
       :freeMode="true"
+      :breakpoints="{
+        '768': {
+          slidesPerView: 1.5
+        },
+        '800': {
+          slidesPerView: 1.75
+        },
+        '900': {
+          slidesPerView: 2
+        },
+        '1024': {
+          slidesPerView: 2.25
+        },
+        '1100': {
+          slidesPerView: 2.5
+        },
+        '1200': {
+          slidesPerView: 2.75
+        },
+        '1300': {
+          slidesPerView: 3
+        },
+        '1400': {
+          slidesPerView: 3.25
+        },
+        '1600': {
+          slidesPerView: 3.5
+        },
+        '1800': {
+          slidesPerView: 4
+        }
+      }"
       :modules="modules"
       class="portfolio"
     >
