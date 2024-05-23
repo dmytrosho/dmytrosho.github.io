@@ -19,4 +19,12 @@ import HomePage from '../components/HomePage.vue'
     overflow: auto;
   }
 }
+
+@media screen and (min-width: 1800px) {
+  section {
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+}
 </style>

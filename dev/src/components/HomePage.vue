@@ -1,5 +1,5 @@
 <template>
-  <template v-if="isMobile">
+  <template v-if="isMobile || isUltraWide">
     <SitePreview url="http://dmytrosho.github.io/resume" text="Resume" :local="resume_local" />
     <SitePreview
       url="http://dmytrosho.github.io/skyfitness"
@@ -40,12 +40,12 @@
         '1400': {
           slidesPerView: 3.25
         },
-        '1600': {
+        '1500': {
           slidesPerView: 3.5
         },
-        '1800': {
-          slidesPerView: 4
-        }
+        '1600': {
+          slidesPerView: 3.75
+        },
       }"
       :modules="modules"
       class="portfolio"
@@ -80,15 +80,16 @@ export default {
     return {
       resume_local,
       skyfitness_local,
-      isMobile: false
+      isMobile: false,
+      isUltraWide: false
     }
   },
   mounted() {
-    this.checkIsMobile()
-    window.addEventListener('resize', this.checkIsMobile)
+    this.checkSize()
+    window.addEventListener('resize', this.checkSize)
   },
   beforeUnmount() {
-    window.removeEventListener('resize', this.checkIsMobile)
+    window.removeEventListener('resize', this.checkSize)
   },
   computed: {
     modules() {
@@ -96,13 +97,9 @@ export default {
     }
   },
   methods: {
-    checkIsMobile() {
+    checkSize() {
       this.isMobile = window.matchMedia('(max-width: 768px)').matches
-      if (this.isMobile) {
-        this.swiperDirection = 'horizontal'
-      } else {
-        this.swiperDirection = 'vertical'
-      }
+      this.isUltraWide = window.matchMedia('(min-width: 1800px)').matches
     }
   }
 }
