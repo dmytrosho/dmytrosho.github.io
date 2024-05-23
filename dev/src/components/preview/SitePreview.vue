@@ -96,6 +96,7 @@ export default {
       position: absolute;
       top: 0;
       left: 0;
+      border-radius: 1rem;
       background-color: rgba(0, 0, 0, 0.05);
       transition: all 1s ease-in-out;
       opacity: 1;
@@ -124,7 +125,7 @@ export default {
     }
 
     &:hover {
-      box-shadow: 0 0 3rem rgba(106, 90, 60, 0.1);
+      box-shadow: 0 0 3rem rgba(106, 90, 60, 0.25);
 
       &::after {
         opacity: 0;

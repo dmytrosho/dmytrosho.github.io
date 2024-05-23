@@ -68,7 +68,7 @@
 </template>
 
 <script>
-import SitePreview from '../components/SitePreview.vue'
+import SitePreview from './preview/SitePreview.vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { FreeMode, Navigation } from 'swiper/modules'
 import 'swiper/css'

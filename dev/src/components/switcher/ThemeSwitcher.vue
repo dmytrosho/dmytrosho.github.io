@@ -44,7 +44,7 @@ export default {
     opacity: 0.5;
     appearance: none;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    transition: all 1s ease-in-out;
 
     &:hover {
       opacity: 1;

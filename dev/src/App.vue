@@ -58,42 +58,30 @@ nav {
     font-size: 3rem;
     font-weight: normal;
     text-transform: capitalize;
-    opacity: 0.75;
 
     a {
       gap: 0;
       color: burlywood;
+      transition: all 0.3s ease-in-out;
+      opacity: 0.75;
+
+      &:hover {
+        opacity: 1;
+      }
     }
 
     i {
       font-style: normal;
       animation: flicker 0.46s infinite alternate;
     }
-
-    sup,
-    sub {
-      font-size: 1rem;
-    }
-
-    sup {
-      margin-left: 0.25rem;
-      margin-bottom: -1.75rem;
-    }
-
-    sub {
-      margin-top: -1.75rem;
-      margin-right: 1.25rem;
-    }
   }
 }
 
 footer {
-  padding: 0 1rem 1rem;
-  color: burlywood;
+  padding: 0 1rem 1.25rem;
+  color: rgba(0, 0, 0, 0.1);
   font-size: 1rem;
-  font-weight: 100;
-  line-height: 2rem;
-  opacity: 0.75;
+  line-height: 1.75rem;
 }
 
 @media screen and (max-width: 768px) {
