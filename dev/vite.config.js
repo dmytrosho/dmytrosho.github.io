@@ -14,13 +14,16 @@ async function copyFiles() {
 
   try {
     if (await fs.pathExists(assetsDir)) {
-      await fs.remove(assetsDir)
+      console.log('Removing existing assets directory...');
+      await fs.remove(assetsDir);
     }
+
 
     for (const file of filesToCopy) {
       const srcPath = path.join(buildTempDir, file)
       const destPath = path.join(outputDir, file)
       if (await fs.pathExists(srcPath)) {
+        console.log(`Copying file: ${file}`)
         await fs.copy(srcPath, destPath)
       } else {
         console.log(`File not found: ${file}`)
@@ -29,11 +32,13 @@ async function copyFiles() {
 
     const srcAssetsPath = path.join(buildTempDir, 'assets')
     if (await fs.pathExists(srcAssetsPath)) {
+      console.log('Copying assets directory...')
       await fs.copy(srcAssetsPath, assetsDir);
     } else {
       console.log('Assets directory not found');
     }
 
+    console.log('Removing temporary build directory...')
     await fs.remove(buildTempDir)
   } catch (error) {
     console.error('Error in custom build:', error)
