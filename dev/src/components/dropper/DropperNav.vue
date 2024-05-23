@@ -105,7 +105,7 @@ export default {
     display: flex;
     gap: 0.5rem;
     padding: 0 0.5rem;
-    background-color: #e8e6e2;
+    // background-color: #e8e6e2;
     // background-color: var(--ds-muted);
 
     .dropper-item {

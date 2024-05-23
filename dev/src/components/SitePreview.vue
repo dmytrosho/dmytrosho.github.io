@@ -126,7 +126,7 @@ export default {
     &:hover {
       box-shadow: 0 0 3rem rgba(106, 90, 60, 0.1);
 
-      &::before {
+      &::after {
         opacity: 0;
       }
     }
