@@ -18,13 +18,13 @@ export default {
     const savedTheme = localStorage.getItem('theme')
     if (savedTheme) {
       this.isDarkTheme = savedTheme === 'dark'
-      document.body.classList.toggle('dark', this.isDarkTheme)
+      document.documentElement.setAttribute('data-theme', this.isDarkTheme ? 'dark' : 'light')
     }
   },
   methods: {
     toggleTheme() {
       this.isDarkTheme = !this.isDarkTheme
-      document.body.classList.toggle('dark', this.isDarkTheme)
+      document.documentElement.setAttribute('data-theme', this.isDarkTheme ? 'dark' : 'light')
       localStorage.setItem('theme', this.isDarkTheme ? 'dark' : 'light')
     }
   }

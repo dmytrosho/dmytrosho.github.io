@@ -13,7 +13,7 @@
     <swiper
       :slidesPerView="3.5"
       :spaceBetween="0"
-      :navigation="true"
+      :navigation="{ prevEl: prevBtn, nextEl: nextBtn }"
       :freeMode="true"
       :breakpoints="{
         '768': {
@@ -45,7 +45,7 @@
         },
         '1600': {
           slidesPerView: 3.75
-        },
+        }
       }"
       :modules="modules"
       class="portfolio"
@@ -62,6 +62,8 @@
       <swiper-slide><SitePreview url="" text="Coming soon..." /></swiper-slide>
       <swiper-slide><SitePreview url="" text="Coming soon..." /></swiper-slide>
     </swiper>
+    <button ref="prevBtn" class="swiper-button-prev"></button>
+    <button ref="nextBtn" class="swiper-button-next"></button>
   </template>
 </template>
 
@@ -81,10 +83,14 @@ export default {
       resume_local,
       skyfitness_local,
       isMobile: false,
-      isUltraWide: false
+      isUltraWide: false,
+      prevBtn: null,
+      nextBtn: null
     }
   },
   mounted() {
+    this.prevBtn = this.$refs.prevBtn
+    this.nextBtn = this.$refs.nextBtn
     this.checkSize()
     window.addEventListener('resize', this.checkSize)
   },
@@ -107,42 +113,43 @@ export default {
 
 <style lang="scss">
 .swiper {
-  padding: 2rem 2rem 5rem;
+  padding: 2rem;
 
   .swiper-slide {
     display: flex;
   }
+}
 
-  .swiper-button-prev,
-  .swiper-button-next {
-    width: 2rem;
-    height: 2rem;
-    top: auto;
-    bottom: 1.25rem;
-    border-radius: 100%;
-    background-color: white;
+.swiper-button-prev,
+.swiper-button-next {
+  width: 2rem;
+  height: 2rem;
+  top: auto;
+  bottom: 1.25rem;
+  border: none;
+  border-radius: 100%;
+  background-color: white;
 
-    &::after {
-      color: burlywood;
-      font-size: 1rem;
-      font-weight: bold;
-    }
+  &::after {
+    color: burlywood;
+    font-size: 1rem;
+    font-weight: bold;
   }
+}
 
-  .swiper-button-prev {
-    left: auto;
-    right: 4.5rem;
+.swiper-button-prev {
+  left: auto;
+  right: 4.5rem;
 
-    &::after {
-      padding-right: 2px;
-    }
+  &::after {
+    padding-right: 2px;
   }
-  .swiper-button-next {
-    right: 2rem;
+}
+.swiper-button-next {
+  right: 2rem;
 
-    &::after {
-      padding-left: 2px;
-    }
+  &::after {
+    padding-left: 2px;
   }
 }
 </style>

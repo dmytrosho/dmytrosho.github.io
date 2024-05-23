@@ -15,6 +15,7 @@ import { RouterView } from 'vue-router'
     <switcher />
   </nav>
   <RouterView />
+  <footer>dmytrosho &copy; {{ currentYear }}</footer>
 </template>
 
 <script>
@@ -22,6 +23,11 @@ import dropper from './components/dropper/DropperNav.vue'
 import switcher from './components/switcher/ThemeSwitcher.vue'
 export default {
   components: { dropper, switcher },
+  computed: {
+    currentYear() {
+      return new Date().getFullYear()
+    }
+  },
   data() {
     return {
       navLinks: [
@@ -79,6 +85,15 @@ nav {
       margin-right: 1.25rem;
     }
   }
+}
+
+footer {
+  padding: 0 1rem 1rem;
+  color: burlywood;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 2rem;
+  opacity: 0.75;
 }
 
 @media screen and (max-width: 768px) {
