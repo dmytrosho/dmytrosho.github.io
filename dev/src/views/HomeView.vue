@@ -20,7 +20,7 @@ import HomePage from '../components/HomePage.vue'
   }
 }
 
-@media screen and (min-width: 1800px) {
+@media screen and (min-width: 1921px) {
   section {
     justify-content: center;
     gap: 2rem;

@@ -46,6 +46,12 @@
         },
         '1600': {
           slidesPerView: 3.75
+        },
+        '1800': {
+          slidesPerView: 4
+        },
+        '1920': {
+          slidesPerView: 4.25
         }
       }"
       :modules="modules"
@@ -107,7 +113,7 @@ export default {
   methods: {
     checkSize() {
       this.isMobile = window.matchMedia('(max-width: 768px)').matches
-      this.isUltraWide = window.matchMedia('(min-width: 1800px)').matches
+      this.isUltraWide = window.matchMedia('(min-width: 1921px)').matches
     }
   }
 }
