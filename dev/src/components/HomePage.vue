@@ -14,7 +14,6 @@
     <swiper
       :slidesPerView="3.5"
       :spaceBetween="0"
-      :navigation="{ prevEl: prevBtn, nextEl: nextBtn }"
       :freeMode="true"
       :breakpoints="{
         '768': {
@@ -64,8 +63,8 @@
       <swiper-slide><SitePreview url="" text="Coming soon..." /></swiper-slide>
       <swiper-slide><SitePreview url="" text="Coming soon..." /></swiper-slide>
     </swiper>
-    <button ref="prevBtn" class="swiper-button-prev"></button>
-    <button ref="nextBtn" class="swiper-button-next"></button>
+    <!-- <button ref="prevBtn" class="swiper-button-prev"></button> -->
+    <!-- <button ref="nextBtn" class="swiper-button-next"></button> -->
   </template>
 </template>
 
@@ -86,13 +85,13 @@ export default {
       skyfitness_local,
       isMobile: false,
       isUltraWide: false,
-      prevBtn: null,
-      nextBtn: null
+      // prevBtn: null,
+      // nextBtn: null
     }
   },
   mounted() {
-    this.prevBtn = this.$refs.prevBtn
-    this.nextBtn = this.$refs.nextBtn
+    // this.prevBtn = this.$refs.prevBtn
+    // this.nextBtn = this.$refs.nextBtn
     this.checkSize()
     window.addEventListener('resize', this.checkSize)
   },
