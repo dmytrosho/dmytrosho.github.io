@@ -1,6 +1,6 @@
 <template>
   <div class="link flex">
-    <a :href="url" class="link-with-preview" :style="{ backgroundImage: 'url(' + image + ')' }">
+    <a :href="url" :style="{ backgroundImage: 'url(' + image + ')' }">
       <template v-if="loading">
         <font-awesome-icon :icon="['fas', 'spinner']" />
       </template>
@@ -51,7 +51,7 @@ export default {
         'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1'
       const width = '390'
       const height = '844'
-      const fresh = false
+      const fresh = true
       let query = 'https://shot.screenshotapi.net/screenshot'
       query += `?token=${token}&url=${encodeURIComponent(this.url)}&fresh=${fresh}&width=${width}&height=${height}&user_agent=${encodeURIComponent(userAgent)}&full_page=true`
 
