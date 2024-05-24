@@ -1,21 +1,21 @@
 @font-face {
   font-family: 'Aptos';
-  src: url('./fonts/aptos/aptos.eot');
-  src: url('./fonts/aptos/aptos.ttf') format('truetype');
+  src: url('@/assets/fonts/aptos/aptos.eot');
+  src: url('@/assets/fonts/aptos/aptos.ttf') format('truetype');
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'Aptos';
-  src: url('./fonts/aptos/aptos-semibold.eot');
-  src: url('./fonts/aptos/aptos-semibold.ttf') format('truetype');
+  src: url('@/assets/fonts/aptos/aptos-semibold.eot');
+  src: url('@/assets/fonts/aptos/aptos-semibold.ttf') format('truetype');
   font-weight: bold;
 }
 
 @font-face {
   font-family: 'Aptos';
-  src: url('./fonts/aptos/aptos-light.eot');
-  src: url('./fonts/aptos/aptos-light.ttf') format('truetype');
+  src: url('@/assets/fonts/aptos/aptos-light.eot');
+  src: url('@/assets/fonts/aptos/aptos-light.ttf') format('truetype');
   font-weight: 100;
 }
 
