@@ -39,7 +39,13 @@ a {
 
 #nprogress {
   .bar {
-    background: var(--res-accented-text);
+    // background: var(--res-accented-text);
     // background: var(--ds-accent);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #app {
+    overflow: auto;
   }
 }

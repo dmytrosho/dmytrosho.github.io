@@ -13,10 +13,10 @@ import HomePage from '../components/HomePage.vue'
 <style lang="scss" scoped>
 @media screen and (max-width: 768px) {
   section {
+    flex: 0 0 auto;
     flex-direction: column;
     gap: 2rem;
-    padding: 2rem;
-    overflow: auto;
+    padding: 5.5rem 2rem 2rem;
   }
 }
 

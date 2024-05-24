@@ -8,6 +8,7 @@
     />
     <SitePreview url="" text="Coming soon..." />
     <SitePreview url="" text="Coming soon..." />
+    <SitePreview url="" text="Coming soon..." />
   </template>
   <template v-else>
     <swiper
@@ -59,6 +60,7 @@
           text="SkyFitness"
           :local="skyfitness_local"
       /></swiper-slide>
+      <swiper-slide><SitePreview url="" text="Coming soon..." /></swiper-slide>
       <swiper-slide><SitePreview url="" text="Coming soon..." /></swiper-slide>
       <swiper-slide><SitePreview url="" text="Coming soon..." /></swiper-slide>
     </swiper>
@@ -131,7 +133,8 @@ export default {
   background-color: white;
 
   &::after {
-    color: burlywood;
+    // color: burlywood;
+    color: var(--ds-accent);
     font-size: 1rem;
     font-weight: bold;
   }
@@ -150,6 +153,17 @@ export default {
 
   &::after {
     padding-left: 2px;
+  }
+}
+
+[data-theme='dark'] {
+  .swiper-button-prev,
+  .swiper-button-next {
+    background-color: var(--ds-dark-button);
+
+    &::after {
+      color: var(--ds-dark-accent);
+    }
   }
 }
 </style>

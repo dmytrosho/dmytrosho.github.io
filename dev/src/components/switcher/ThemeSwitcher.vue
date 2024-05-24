@@ -39,7 +39,7 @@ export default {
     padding: 0;
     border: none;
     background: none;
-    color: burlywood;
+    color: var(--ds-text);
     font-size: 1.25rem;
     opacity: 0.5;
     appearance: none;
@@ -48,6 +48,14 @@ export default {
 
     &:hover {
       opacity: 1;
+    }
+  }
+}
+
+[data-theme='dark'] {
+  .theme {
+    button {
+      color: var(--ds-dark-text);
     }
   }
 }

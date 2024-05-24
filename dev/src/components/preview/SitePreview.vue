@@ -84,7 +84,7 @@ export default {
     background-position: top;
     background-repeat: no-repeat;
     background-color: white;
-    color: burlywood;
+    color: var(--ds-accent);
     font-size: 2rem;
     outline: 10px solid white;
     transition: all 1s ease-in-out;
@@ -125,10 +125,28 @@ export default {
     }
 
     &:hover {
-      box-shadow: 0 0 3rem rgba(106, 90, 60, 0.25);
+      box-shadow: 0 0 3rem rgba(0, 0, 0, 0.15);
 
       &::after {
         opacity: 0;
+      }
+    }
+  }
+}
+
+[data-theme='dark'] {
+  .link {
+    a {
+      background-color: var(--ds-bakground);
+      color: var(--ds-dark-accent);
+      outline-color: var(--ds-dark-outline);
+
+      span {
+        background-color: var(--ds-dark-background);
+      }
+
+      &:hover {
+        
       }
     }
   }
