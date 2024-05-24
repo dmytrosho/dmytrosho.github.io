@@ -51,9 +51,6 @@ nav {
   gap: 0.5rem;
   position: relative;
   padding: 0 1rem;
-  // background-color: #e8e6e2;
-  // background-color: var(--ds-header);
-  // background-color: var(--ds-accent);
   background-color: var(--ds-green);
 
   h1 {
@@ -64,7 +61,6 @@ nav {
 
     a {
       gap: 0;
-      // color: burlywood;
       color: var(--ds-text);
       transition: all 0.3s ease-in-out;
       opacity: 0.75;
