@@ -84,21 +84,21 @@ nav {
 footer {
   display: flex;
   padding: 0 1rem 1.25rem;
-  color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.25);
   font-size: 1rem;
+  font-weight: 100;
   line-height: 1.75rem;
 }
 
 [data-theme='dark'] {
-nav {
-  background-color: var(--ds-dark-header);
-
-  h1 {
-    a {
-      color: var(--ds-dark-text);
-    }
+  nav {
+    background-color: var(--ds-dark-header);
   }
-}
+
+  footer {
+    color: var(--ds-text);
+    opacity: 0.1;
+  }
 }
 
 @media screen and (max-width: 768px) {

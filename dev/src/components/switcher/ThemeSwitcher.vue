@@ -55,7 +55,7 @@ export default {
 [data-theme='dark'] {
   .theme {
     button {
-      color: var(--ds-dark-text);
+      // color: var(--ds-dark-text);
     }
   }
 }

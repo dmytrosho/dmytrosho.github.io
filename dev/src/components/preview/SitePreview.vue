@@ -80,6 +80,7 @@ export default {
     gap: 0;
     position: relative;
     border-radius: 1rem;
+    border-bottom-left-radius: 0;
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
@@ -97,6 +98,7 @@ export default {
       top: 0;
       left: 0;
       border-radius: 1rem;
+      border-bottom-left-radius: 0;
       background-color: rgba(0, 0, 0, 0.05);
       transition: all 1s ease-in-out;
       opacity: 1;
@@ -107,9 +109,10 @@ export default {
     span {
       display: flex;
       align-self: flex-end;
-      padding: 0 1.5rem 0 1rem;
+      margin-bottom: -0.25rem;
+      padding: 0 1.5rem 0 0.75rem;
       border-top-right-radius: 1rem;
-      border-bottom-left-radius: 1rem;
+      // border-bottom-left-radius: 1rem;
       background-color: white;
       z-index: 1;
     }
@@ -138,15 +141,15 @@ export default {
   .link {
     a {
       background-color: var(--ds-bakground);
-      color: var(--ds-dark-accent);
-      outline-color: var(--ds-dark-outline);
+      // color: var(--ds-dark-accent);
+      color: var(--ds-text);
+      outline-color: var(--ds-dark-header);
 
       span {
-        background-color: var(--ds-dark-background);
+        background-color: var(--ds-dark-header);
       }
 
       &:hover {
-        
       }
     }
   }

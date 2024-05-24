@@ -133,7 +133,6 @@ export default {
   background-color: white;
 
   &::after {
-    // color: burlywood;
     color: var(--ds-accent);
     font-size: 1rem;
     font-weight: bold;
@@ -159,10 +158,10 @@ export default {
 [data-theme='dark'] {
   .swiper-button-prev,
   .swiper-button-next {
-    background-color: var(--ds-dark-button);
+    background-color: var(--ds-dark-header);
 
     &::after {
-      color: var(--ds-dark-accent);
+      color: var(--ds-text);
     }
   }
 }

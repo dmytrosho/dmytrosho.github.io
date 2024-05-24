@@ -138,7 +138,7 @@ export default {
 [data-theme='dark'] {
   .dropper {
     a {
-      color: var(--ds-dark-text);
+      // color: var(--ds-dark-text);
     }
   }
 }
