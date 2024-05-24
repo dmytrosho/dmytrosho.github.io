@@ -28,7 +28,6 @@
 
 a {
   display: inline-flex;
-  // color: var(--res-linking-text);
   text-decoration: none;
   letter-spacing: -2px;
 }
@@ -39,8 +38,7 @@ a {
 
 #nprogress {
   .bar {
-    // background: var(--res-accented-text);
-    // background: var(--ds-accent);
+    background: var(--ds-accent);
   }
 }
 

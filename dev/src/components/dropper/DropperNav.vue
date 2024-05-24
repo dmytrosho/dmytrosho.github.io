@@ -92,7 +92,6 @@ export default {
 
   a {
     padding: 0 0.5rem;
-    // color: burlywood;
     color: var(--ds-text);
     font-size: 3rem;
     text-transform: capitalize;
@@ -133,14 +132,6 @@ export default {
 .dropdown-leave-from {
   opacity: 1;
   transform: translateX(0);
-}
-
-[data-theme='dark'] {
-  .dropper {
-    a {
-      // color: var(--ds-dark-text);
-    }
-  }
 }
 
 @media screen and (max-width: 768px) {

@@ -25,7 +25,6 @@
 
 <style lang="scss" scoped>
 label {
-  // color: var(--res-text-light-2);
   color: var(--ds-text);
 }
 
@@ -35,7 +34,6 @@ textarea {
   border: none;
   border-radius: 0.25rem;
   background-color: rgba(0, 0, 0, 0.05);
-  // color: var(--res-text-light-2);
   color: var(--ds-text);
   font-size: 1rem;
   outline: 0.25rem solid white;
@@ -80,8 +78,5 @@ button {
     background-color: var(--ds-dark-button);
     color: var(--ds-dark-accent);
   }
-}
-
-@media screen and (max-width: 768px) {
 }
 </style>

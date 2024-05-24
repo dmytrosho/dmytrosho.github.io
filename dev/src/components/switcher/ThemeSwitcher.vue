@@ -52,14 +52,6 @@ export default {
   }
 }
 
-[data-theme='dark'] {
-  .theme {
-    button {
-      // color: var(--ds-dark-text);
-    }
-  }
-}
-
 @media screen and (max-width: 768px) {
   .theme {
     flex: 0 0 2rem;

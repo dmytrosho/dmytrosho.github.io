@@ -60,9 +60,9 @@
           text="SkyFitness"
           :local="skyfitness_local"
       /></swiper-slide>
-      <swiper-slide><SitePreview url="" text="Coming soon..." /></swiper-slide>
-      <swiper-slide><SitePreview url="" text="Coming soon..." /></swiper-slide>
-      <swiper-slide><SitePreview url="" text="Coming soon..." /></swiper-slide>
+      <!-- <swiper-slide><SitePreview url="" text="Coming soon..." /></swiper-slide> -->
+      <!-- <swiper-slide><SitePreview url="" text="Coming soon..." /></swiper-slide> -->
+      <!-- <swiper-slide><SitePreview url="" text="Coming soon..." /></swiper-slide> -->
     </swiper>
     <button ref="prevBtn" class="swiper-button-prev"></button>
     <button ref="nextBtn" class="swiper-button-next"></button>

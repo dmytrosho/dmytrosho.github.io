@@ -112,7 +112,6 @@ export default {
       margin-bottom: -0.25rem;
       padding: 0 1.5rem 0 0.75rem;
       border-top-right-radius: 1rem;
-      // border-bottom-left-radius: 1rem;
       background-color: white;
       z-index: 1;
     }
@@ -141,15 +140,11 @@ export default {
   .link {
     a {
       background-color: var(--ds-bakground);
-      // color: var(--ds-dark-accent);
       color: var(--ds-text);
       outline-color: var(--ds-dark-header);
 
       span {
         background-color: var(--ds-dark-header);
-      }
-
-      &:hover {
       }
     }
   }
