@@ -41,7 +41,7 @@ export default {
   methods: {
     async fetchScreenshot() {
       if (!this.url) {
-        console.error('No valid URL')
+        console.log('No valid URL')
         return
       }
 
@@ -58,7 +58,7 @@ export default {
       try {
         const response = await axios.get(query)
         if (response.data.error) {
-          console.error(response.data.error)
+          console.log(response.data.error)
           this.image = this.local
         } else {
           this.image = response.data.screenshot
