@@ -46,7 +46,7 @@ export default {
       }
 
       this.loading = true
-      const token = 'AJ4M0M4-R5XM1BX-NXNRFMV-N8HRSEJ'
+      const token = import.meta.env.VITE_SCREENSHOT_KEY
       const userAgent =
         'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E5239e Safari/602.1'
       const width = '390'
