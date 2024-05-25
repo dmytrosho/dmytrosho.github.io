@@ -51,7 +51,7 @@ nav {
   gap: 0.5rem;
   position: relative;
   padding: 0 1rem;
-  background-color: var(--ds-green);
+  background-color: var(--ds-header);
 
   h1 {
     gap: 0;
@@ -80,7 +80,7 @@ nav {
 footer {
   display: flex;
   padding: 0 1rem 1.25rem;
-  color: rgba(0, 0, 0, 0.25);
+  color: var(--ds-header);
   font-size: 1rem;
   font-weight: 100;
   line-height: 1.75rem;
@@ -92,8 +92,7 @@ footer {
   }
 
   footer {
-    color: var(--ds-text);
-    opacity: 0.1;
+    color: var(--ds-dark-header);
   }
 }
 
